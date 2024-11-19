@@ -591,7 +591,7 @@ function getIntegerPartNumber(number) {
  */
 function getSumOfNumbers(x1, x2, x3) {
   const sum = x1 + x2 + x3;
-  return sum;
+  return parseFloat(sum.toFixed(10));
 }
 
 /**
@@ -654,7 +654,12 @@ function getHypotenuse(a, b) {
  * 15 => 8
  */
 function getCountOfOddNumbers(number) {
-  return (number + 1) / 2;
+  let numberOfElemets = 0;
+  const n = Math.abs(number);
+  for (let i = 1; i <= n; i += 2) {
+    numberOfElemets += 1;
+  }
+  return numberOfElemets;
 }
 
 module.exports = {
